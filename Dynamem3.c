@@ -6,13 +6,13 @@
 //
 int main(){
 
-int *p = (int *)malloc(3 * sizeof(int))
+int *p = (int *)malloc(3 * sizeof(int));
 
 	printf(p);
 	
 	*p = 2;
 	*(p+1) = 4;
 	*(p+2) = 6;
-	printf("%d", *(p+1));
+	printf("%d\n", *(p+1));
 
 }
