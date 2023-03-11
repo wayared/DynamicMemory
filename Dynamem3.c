@@ -10,9 +10,9 @@ int *p = (int *)malloc(3 * sizeof(int));
 
 	printf(p);
 	
-	*p = 2;
-	*(p+1) = 4;
-	*(p+2) = 6;
-	printf("%d\n", *(p+1));
+	*p = 2; 
+	*(p+1) = 4; // or p[1] = 4
+	*(p+2) = 6; // or use p[2] = 6;
+	printf("%d\n", (p+1));
 
 }
