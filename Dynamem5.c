@@ -9,8 +9,9 @@ void PrintHelloWorld(){
 int *Add(int* a, int* b){ //Called function - returns pointer to integer
 
 	//int c = (*a) + (*b);
-	int c = (*a) + (*b);
-	return &c;
+	int* c = (int*)malloc(sizeof(int));
+	*c = (*a) + (*b);
+	return c;
 }
 
 int main(){ // Calling function
