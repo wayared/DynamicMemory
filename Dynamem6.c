@@ -13,8 +13,8 @@ int main(){
 	
 	int c;
 	int (*p)(int,int);
-	p = &Add;
-	c = (*p)(2,3); // de-referencing and executing the function
+	p = &Add; // or this also works p = Add;
+	c = (*p)(2,3);  // de-referencing and executing the function // c = p(2,3);
 	printf("%d\n",c);
 
 }
