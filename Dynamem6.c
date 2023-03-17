@@ -7,6 +7,8 @@ int Add(int a, int b){
 
 }
 
+// int* (*Func)(int,int); declaring a function that would return int*
+
 int main(){
 	
 	int c;
