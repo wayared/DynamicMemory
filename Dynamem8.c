@@ -2,7 +2,7 @@
 
 void A(){
 
-	printf("Hello");
+	printf("Hello\n");
 }
 
 void B(void (*ptr)()){	// function pointer as argument
@@ -11,6 +11,7 @@ void B(void (*ptr)()){	// function pointer as argument
 }
 
 int main(){
-	void ()()= A;
+	void (*p)()= A;
 	B(p);
+	// tambien se puede usar solo B(A); para las dos lineas anteriores
 }
