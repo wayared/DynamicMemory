@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include<time.h>
 int cash = 100;
 void Play(int bet){
@@ -5,7 +6,7 @@ void Play(int bet){
 	printf("Shuffling ...\n");
 	srand(time(NULL)); // seeding random number generator
 	int i;
-	for(i=0;i <5,i++){
+	for(i=0;i <5;i++){
 		int x = rand() %3;
 		int y = rand() %3;
 		int temp = C[x];
@@ -34,6 +35,6 @@ int main() {
 		if(bet == 0 || bet > cash) break;
 		Play(bet);
 
+		}
 	}
-
 }
