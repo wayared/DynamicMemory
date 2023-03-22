@@ -15,5 +15,12 @@ void Play(int bet){
 	int playerGuess;
 	printf("What's the position of queen - 1,2 or 3?");
 	scanf("%d,&playerGuess");
+	if(C[playerGuess - 1] == 'Q'){
+	cash += 3*bet;
+	printf("You Win ! Result = \"%c %c %c\" Total Cash = %d\n", C[0],C[1],C[2]);
+	}
+	else{
+	      cash -= bet;
+      	      printf("You Loose! Result = \"%c %c %c\" Total Cash = %d\n", C[0],C[1],C[2]); 			      
 
 }
