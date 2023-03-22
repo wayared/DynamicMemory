@@ -1,9 +1,19 @@
 #include<stdio.h>
 #include<time.h>
-int cash = 100;
+extern int cash;
 void Play(int bet){
-	char C[3] = {'J','Q','K'};
+	
+	int cash = 100;
+	
+	//char C[3] = {'J','Q','K'};
+	
+	char *C = (char *)malloc(3*sizeof(char)); //c ++ : char *C = new char[3];
+	C[0] = 'J';
+	C[1] = 'Q';
+	C[2] = 'K';
+
 	printf("Shuffling ...\n");
+	
 	srand(time(NULL)); // seeding random number generator
 	int i;
 	for(i=0;i <5;i++){
@@ -23,18 +33,6 @@ void Play(int bet){
 	else{
 	      cash -= bet;
       	      printf("You Loose! Result = \"%c %c %c\" Total Cash = %d\n", C[0],C[1],C[2]); 			      
-}
 
-int main() {
-	int bet;
-	printf("****Welcome to the Virtual Casino***\n\n");
-	printf("Total cash = $%d\n",cash);
-	while(cash > 0){
-	  	printf("What's your bet? $");
-		scanf("%n",&bet);
-		if(bet == 0 || bet > cash) break;
-		Play(bet);
-		printf("\n **********************************************\n");
-		}
 	}
 }
