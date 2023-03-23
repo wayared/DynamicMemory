@@ -36,3 +36,7 @@ void Play(int bet){
 
 	}
 }
+
+
+// Agregar nota de como funciona este proceso 
+// buscar comando de como ver procesos en ubuntu para ver el espacio ocupado por el proceso en tiempo de ejecucion
